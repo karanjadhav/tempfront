@@ -1,0 +1,76 @@
+
+<div class="col-md-6 offset-md-3">
+    <h3> Register User </h3>
+   <!-- <div class="alert alert-danger" role="alert" *ngIf="uiInvalidCredential">
+        User Already Exists..
+      </div>
+      -->
+    <form (ngSubmit) = "onSubmit()" [formGroup]="fbFormGroup">
+    
+        <div class="form-group">
+            <label> User Name</label>
+            <input type="text" class ="form-control" id = "userName"
+                [(ngModel)] = "user.userName" name = "userName" formControlName="userName">
+        </div>
+    
+        <div class="form-group">
+            <label> Password</label>
+            <input type="text" class ="form-control" id = "password"
+                [(ngModel)] = "user.password" name = "password" formControlName="password">
+        </div>
+    
+        <div class="form-group">
+            <label> Email Id</label>
+            <input type="email" class ="form-control" id = "emailId"
+                [(ngModel)] = "user.emailId" name = "emailId" formControlName="emailId">
+        </div>
+    
+        <div class="form-group">
+            <label> Mobile No</label>
+            <input type="text" class ="form-control" id = "mobileNo"
+                [(ngModel)] = "user.mobileNo" name = "mobileNo" formControlName="mobileNo">
+        </div>
+
+    <div class="form-group">
+            <label> Gender</label>
+            <input type="text" class ="form-control" id = "gender"
+                [(ngModel)] = "user.gender" name = "gender">
+        </div>
+    
+
+        <!--<div class="form-group" >
+            <label> Gender</label><br>
+        <select [(ngModel)]="user.gender" id="gender" name="gender" 
+            class="form-control" formControlName="gender">
+            <option   value="male">Male</option>
+            <option  value="female">Female</option>
+            <option  value="transgender">TransGender</option>
+          </select>
+
+          <input type="radio" id="gender1" class=" form-check-input" [(ngModel)]="user.gender" [value]="male" >
+          <label class="form-check-label" for="lblgender1">
+            Male
+          </label><br>
+          <input type="radio" id="gender1" class=" form-check-input" [(ngModel)]="user.gender" [value]="female" >
+          <label class="form-check-label" for="lblgender1">
+            Female
+          </label>
+        </div>
+        -->
+
+        <div class="form-group">
+            <label> city</label>
+            <input type="text" class ="form-control" id = "city"
+                [(ngModel)] = "user.city" name = "city" formControlName="city">
+        </div>
+
+        <div class="form-group">
+            <label> PinCode</label>
+            <input type="text" class ="form-control" id = "pincode"
+                [(ngModel)] = "user.pincode" name = "pincode" formControlName="pincode">
+        </div>
+        <button class = "btn btn-success" type ="submit" >Register</button>
+        
+    
+    </form>
+    </div> 

@@ -1,0 +1,37 @@
+
+<button class="btn btn-info" (click)="logoutFunction()">Logout</button>
+<a class="btn btn-success" (click)="addBookBtnClick()" >Add Book</a>
+<a class="btn btn-success" (click)="profileBtnClick()" >Profile</a>
+<h1>Book List</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>User Id</th>
+            <th>ISBN</th>
+            <th>Book Name</th>
+            <th>Author Name</th>
+            <th>Genre</th>
+            <th>Publisher</th>
+            <th>Cost</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor= "let book of books">
+            <td>{{book.userId}}</td>
+            <td>{{book.isbn}}</td>
+            <td>{{book.title}}</td>
+            <td>{{book.author}}</td>
+            <td>{{book.genre}}</td>
+            <td>{{book.publisher}}</td>
+            <td>{{book.cost}}</td>
+            <td>
+                <button (click)="updateBook(book.bookId)" class="btn btn-info">Update</button>
+            </td>
+        </tr>
+    </tbody>
+
+</table>
+
+
